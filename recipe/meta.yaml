@@ -1,6 +1,5 @@
 {% set name = "osrf_pycommon" %}
-{% set version = "0.1.10" %}
-{% set sha256 = "429708204cc3c9389e90da637fc0ac797bc6653853599f0ac4b59091f41b6cb4" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,21 +7,21 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/osrf//{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/osrf/osrf_pycommon/archive/refs/tags/{{ version }}.tar.gz
+  sha256: b369b0d4d81bf3e9f89b38d5b81a957c7e435715e8e9ff06104b975b6e90b119
 
 build:
-  number: 1
+  number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - setuptools
   run:
-    - python
-    - trollius  # [py < 34]
+    - python >=3.6
 
 test:
   imports:
