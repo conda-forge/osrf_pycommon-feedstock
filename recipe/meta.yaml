@@ -1,5 +1,5 @@
 {% set name = "osrf_pycommon" %}
-{% set version = "0.2.1" %}
+{% set version = "2.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/osrf/osrf_pycommon/archive/refs/tags/{{ version }}.tar.gz
-  sha256: b369b0d4d81bf3e9f89b38d5b81a957c7e435715e8e9ff06104b975b6e90b119
+  sha256: 441afd5c3476474a1e5760070fec18860992a4659e84a6a4b59e49217d7cc6af
 
 build:
   number: 0
